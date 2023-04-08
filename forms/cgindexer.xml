@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+	<fields name="params">
+		<fieldset name="task_params">
+			<field name="purge" type="radio"
+				default="1"
+				label="PLG_TASK_CGINDEXER_PURGE"
+				description="PLG_TASK_CGINDEXER_PURGE_DESC" 
+				class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+			</field>
+			<field name="pause" type="radio"
+				default="1"
+				label="PLG_TASK_CGINDEXER_PAUSE"
+				description="PLG_TASK_CGINDEXER_PAUSE_DESC" 
+				class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>
