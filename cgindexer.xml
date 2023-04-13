@@ -2,12 +2,12 @@
 <extension version="4.1" type="plugin" group="task" method="upgrade">
 	<name>PLG_TASK_CGINDEXER</name>
 	<author>conseilgouz</author>
-	<creationDate>2023/04/08</creationDate>
+	<creationDate>2023/04/13</creationDate>
 	<copyright>Copyright (C) 2023 ConseilGouz. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>www.conseilgouz.com</authorUrl>
-	<version>1.0.0</version>
+	<version>1.0.2</version>
 	<description>PLG_TASK_CGINDEXER_DESC</description>
 	<files>
 		<folder plugin="cgindexer">services</folder>
