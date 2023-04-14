@@ -22,7 +22,7 @@
 	<namespace path="src">ConseilGouz\Plugin\Task\CGIndexer</namespace>
 	<changelogurl>https://raw.githubusercontent.com/conseilgouz/plg_task_cgindexer_j4/master/plg_task_cgindexer_changelog.xml</changelogurl>
     <updateservers>
-    <server type="extension" name="task automsg" priority="1">https://raw.githubusercontent.com/conseilgouz/updates_github/master/plg_task_cgindexer_update.xml</server>
+    <server type="extension" name="task CG Indexer" priority="1">https://raw.githubusercontent.com/conseilgouz/updates_github/master/plg_task_cgindexer_update.xml</server>
     </updateservers>
 	
 </extension>
