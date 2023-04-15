@@ -10,7 +10,7 @@
 	<version>1.0.2</version>
 	<description>PLG_TASK_CGINDEXER_DESC</description>
 	<files>
-		<folder plugin="cgindexer">services</folder>
+		<folder plugin="cgexif">services</folder>
 		<folder>src</folder>		
 		<folder>forms</folder>		
 	</files>
