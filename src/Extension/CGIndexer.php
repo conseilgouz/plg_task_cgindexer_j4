@@ -1,11 +1,9 @@
 <?php
-/** GoFTP
- * Version			: 1.0.0
- * Package			: Joomla 4.1
+/** Plugin Task CG Indexer : indexation des contenus à indexer dans la recherche avancée
+ * Version			: 1.0.3
  * copyright 		: Copyright (C) 2023 ConseilGouz. All rights reserved.
  * license    		: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  *
- * lance FTP
  *
  */
 namespace ConseilGouz\Plugin\Task\CGIndexer\Extension;
@@ -19,6 +17,7 @@ use Joomla\Component\Scheduler\Administrator\Event\ExecuteTaskEvent;
 use Joomla\Component\Scheduler\Administrator\Task\Status as TaskStatus;
 use Joomla\Component\Scheduler\Administrator\Traits\TaskPluginTrait;
 use Joomla\Event\SubscriberInterface;
+use Joomla\Event\DispatcherInterface;
 
 Use Joomla\Component\Finder\Administrator\Indexer\Indexer;
 use Joomla\Component\Finder\Administrator\Model\IndexModel;
@@ -89,10 +88,24 @@ final class CGIndexer extends CMSPlugin implements SubscriberInterface {
      */
     private $minimumBatchProcessingTime = 1;
     /**
+     * Constructor.
+     *
+     * @param   DispatcherInterface  $dispatcher  The dispatcher
+     * @param   array                $config      An optional associative array of configuration settings
+     *
+     * @since   4.2.0
+     */
+    public function __construct(DispatcherInterface $dispatcher, array $config)
+    {
+        parent::__construct($dispatcher, $config);
+
+    }
+    /**
      * @inheritDoc
      *
      * @return string[]
      *
+     * @since 4.1.0
      */
     public static function getSubscribedEvents(): array
     {

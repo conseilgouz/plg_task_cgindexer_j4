@@ -1,11 +1,10 @@
 <?php
 
 /**
- * @package     Joomla.Plugin
- * @subpackage  Task.GoFTP
- *
- * @copyright   (C) 2022 Open Source Matters, Inc. <https://www.joomla.org>
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+/** Plugin Task CG Indexer : indexation des contenus à indexer dans la recherche avancée
+ * Version			: 1.0.3
+ * copyright 		: Copyright (C) 2023 ConseilGouz. All rights reserved.
+ * license    		: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
@@ -19,8 +18,7 @@ use Joomla\Event\DispatcherInterface;
 use Joomla\Http\HttpFactory;
 use ConseilGouz\Plugin\Task\CGIndexer\Extension\CGIndexer;
 
-return new class implements ServiceProviderInterface
-{
+return new class () implements ServiceProviderInterface {
     /**
      * Registers the service provider with a DI container.
      *
@@ -40,7 +38,6 @@ return new class implements ServiceProviderInterface
                     (array) PluginHelper::getPlugin('task', 'cgindexer')
                 );
                 $plugin->setApplication(Factory::getApplication());
-
                 return $plugin;
             }
         );
