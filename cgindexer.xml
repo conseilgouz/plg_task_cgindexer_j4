@@ -7,10 +7,10 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>www.conseilgouz.com</authorUrl>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<description>PLG_TASK_CGINDEXER_DESC</description>
 	<files>
-		<folder plugin="cgexif">services</folder>
+		<folder plugin="cgindexer">services</folder>
 		<folder>src</folder>		
 		<folder>forms</folder>		
 	</files>

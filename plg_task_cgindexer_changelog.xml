@@ -3,6 +3,18 @@
 		<element>cgindexer</element>
 		<type>plugin</type>
 		<group>task</group>
+		<version>1.0.4</version>
+        <note>
+            <item>23/04/2023</item>
+        </note>
+         <fix>
+            <item>invalid name in xml file</item>
+        </fix>
+	</changelog>
+	<changelog>
+		<element>cgindexer</element>
+		<type>plugin</type>
+		<group>task</group>
 		<version>1.0.3</version>
         <note>
             <item>23/04/2023</item>
