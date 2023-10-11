@@ -2,9 +2,9 @@
 
 /**
 /** Plugin Task CG Indexer : indexation des contenus à indexer dans la recherche avancée
- * Version			: 1.0.3
+ * Version			: 1.0.5
  * copyright 		: Copyright (C) 2023 ConseilGouz. All rights reserved.
- * license    		: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * license    		: https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
@@ -33,8 +33,9 @@ return new class () implements ServiceProviderInterface {
         $container->set(
             PluginInterface::class,
             function (Container $container) {
+				$dispatcher = $container->get(DispatcherInterface::class);
                 $plugin = new CGIndexer(
-                    $container->get(DispatcherInterface::class),
+                    $dispatcher,
                     (array) PluginHelper::getPlugin('task', 'cgindexer')
                 );
                 $plugin->setApplication(Factory::getApplication());

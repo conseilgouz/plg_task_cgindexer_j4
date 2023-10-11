@@ -1,27 +1,29 @@
 <?php
 /**
-* Task Indexer Plugin  - Joomla 4.0.0 Plugin 
-* Version			: 1.0.0
+* Task Indexer Plugin  - Joomla 4.x/5.x Plugin 
+* Version			: 1.0.5
 * copyright 		: Copyright (C) 2023 ConseilGouz. All rights reserved.
-* license    		: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+* license    		: http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
 */
 // No direct access to this file
 defined('_JEXEC') or die;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
-use Joomla\CMS\Filesystem\Folder;
+use Joomla\Filesystem\Folder;
 use Joomla\CMS\Version;
-use Joomla\CMS\Filesystem\File;
+use Joomla\Filesystem\File;
+use Joomla\CMS\Log\Log;
 
 class plgtaskCGIndexerInstallerScript
 {
 	private $min_joomla_version      = '4.1.0';
-	private $min_php_version         = '7.2';
+	private $min_php_version         = '7.4';
 	private $name                    = 'Plugin Task CGIndexer';
 	private $exttype                 = 'plugin';
 	private $extname                 = 'indexer';
 	private $previous_version        = '';
 	private $dir           = null;
+	private $lang;
 	private $installerName = 'plgtaskcgindexerinstaller';
 	public function __construct()
 	{
@@ -81,7 +83,7 @@ class plgtaskCGIndexerInstallerScript
 	        $db->execute();
         }
         catch (RuntimeException $e) {
-            JLog::add('unable to enable plugin cgindexer', JLog::ERROR, 'jerror');
+            Log::add('unable to enable plugin cgindexer', Log::ERROR, 'jerror');
         }
 	}
 
@@ -120,7 +122,7 @@ class plgtaskCGIndexerInstallerScript
 	}
 	private function uninstallInstaller()
 	{
-		if ( ! Folder::exists(JPATH_PLUGINS . '/system/' . $this->installerName)) {
+		if ( ! is_dir(JPATH_PLUGINS . '/system/' . $this->installerName)) {
 			return;
 		}
 		$this->delete([
